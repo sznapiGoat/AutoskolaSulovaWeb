@@ -82,7 +82,7 @@ export default function WhyUs() {
               Naším cílem je váš úspěch
             </h3>
             <p className="text-white/75 leading-relaxed text-base md:text-lg">
-              Připravujeme vás k úspěšnému složení závěrečné zkoušky tak, aby váš vstup do silničního provozu byl co nejvíce bezpečný. Výuku i výcvik plánujeme podle vašich možností — včetně víkendů a svátků.
+              Připravujeme vás k úspěšnému složení závěrečné zkoušky tak, aby váš vstup do silničního provozu byl co nejvíce bezpečný. Výuku i výcvik plánujeme podle vašich možností, včetně víkendů a svátků.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row md:flex-col gap-4 shrink-0">

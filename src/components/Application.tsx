@@ -26,7 +26,7 @@ export default function Application() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Přihláška do autoškoly — ${form.name}`);
+    const subject = encodeURIComponent(`Přihláška do autoškoly: ${form.name}`);
     const body = encodeURIComponent(
       `Jméno: ${form.name}\nTelefon: ${form.phone}\nE-mail: ${form.email}\n\n${form.message || 'Mám zájem o kurz skupiny B.'}`
     );
@@ -147,7 +147,7 @@ export default function Application() {
                 Nezávazná poptávka
               </h3>
               <p className="text-slate-500 text-sm mb-6">
-                Napište nám — Barbora vás kontaktuje zpět a domluvíme vše individuálně.
+                Napište nám. Barbora vás kontaktuje zpět a domluvíme vše individuálně.
               </p>
 
               {sent ? (

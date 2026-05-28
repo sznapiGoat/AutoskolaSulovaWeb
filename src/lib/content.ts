@@ -5,7 +5,7 @@ export const siteContent = {
   business: {
     name: 'Autoškola Barbora Šůlová',
     shortName: 'Autoškola Šůlová',
-    tagline: 'Řidičák skupiny B — s osobním přístupem a klidem za volantem',
+    tagline: 'Řidičák skupiny B s osobním přístupem a klidem za volantem',
     description: 'Vítáme Vás na stránkách autoškoly Barbory Šůlové. Naším cílem je Vás připravit k úspěšnému složení závěrečné zkoušky tak, aby Váš vstup do silničního provozu byl co nejvíce bezpečný.',
   },
 
@@ -14,7 +14,7 @@ export const siteContent = {
     phoneRaw: '+420721619870',
     email: 'bara.su@seznam.cz',
     address: 'Pod Kostelem 117, Rokycany, 337 01',
-    addressNote: 'Učebna — 2. patro',
+    addressNote: 'Učebna, 2. patro',
     hours: 'Po–Pá 08:00–18:00',
     hoursNote: 'Výuku i výcvik lze naplánovat také na víkend a svátky',
     mapsEmbed: 'https://maps.google.com/maps?q=Auto%C5%A1kola+Barbora+%C5%A0%C5%AFlov%C3%A1+Rokycany&output=embed&t=m&z=15&iwloc=near',
@@ -22,18 +22,18 @@ export const siteContent = {
   },
 
   nav: [
-    { label: 'O nás',       href: '#o-nas' },
-    { label: 'Kurz',        href: '#kurz' },
-    { label: 'Instruktorka',href: '#instruktorka' },
-    { label: 'Reference',   href: '#reference' },
-    { label: 'Přihláška',   href: '#prihlaska' },
-    { label: 'Kontakt',     href: '#kontakt' },
+    { label: 'O nás',        href: '#o-nas' },
+    { label: 'Kurz',         href: '#kurz' },
+    { label: 'Instruktorka', href: '#instruktorka' },
+    { label: 'Reference',    href: '#reference' },
+    { label: 'Přihláška',    href: '#prihlaska' },
+    { label: 'Kontakt',      href: '#kontakt' },
   ],
 
   hero: {
     headline: ['Řidičák skupiny B', 'v bezpečných rukou'],
-    subheadline: 'Osobní přístup, dvě cvičná vozidla a výuka v pohodové atmosféře — přímo v Rokycanech.',
-    ctaPrimary: { label: 'Chci se přihlásit', href: '#kontakt' },
+    subheadline: 'Osobní přístup, dvě cvičná vozidla a výuka v pohodové atmosféře. Přímo v Rokycanech.',
+    ctaPrimary: { label: 'Chci se přihlásit', href: '#prihlaska' },
     ctaSecondary: { label: 'Zobrazit ceník', href: '#kurz' },
     bgImage: '/images/zakyne-s-instruktorkou.jpg',
     stats: [
@@ -47,12 +47,12 @@ export const siteContent = {
     {
       icon: 'UserCheck',
       title: 'Jediná instruktorka',
-      body: 'Celý kurz jedete s Barborou — žádné střídání, žádná cizí tvář. Poznáte se a jezdíte v klidu.',
+      body: 'Celý kurz jedete s Barborou. Žádné střídání, žádná cizí tvář. Poznáte se a jezdíte v klidu.',
     },
     {
       icon: 'Car',
       title: 'Dvě výcviková vozidla',
-      body: 'Škoda Fabia diesel combi (asistent rozjezdu, senzory, kamera) a Suzuki Swift Natural 95 — zvládnete oba typy.',
+      body: 'Škoda Fabia diesel combi (asistent rozjezdu, senzory, kamera) a Suzuki Swift Natural 95. Zvládnete oba typy.',
     },
     {
       icon: 'Calendar',
@@ -62,13 +62,13 @@ export const siteContent = {
     {
       icon: 'Gift',
       title: 'Dárkové poukazy',
-      body: 'Darujte řidičák svým blízkým. Poukaz přizpůsobíme příležitosti — narozeninám, Vánocům a dalším.',
+      body: 'Darujte řidičák svým blízkým. Poukaz přizpůsobíme příležitosti: narozeninám, Vánocům a dalším.',
     },
   ],
 
   course: {
     category: 'Skupina B',
-    categoryFull: 'Skupina B — osobní automobil',
+    categoryFull: 'Skupina B (osobní automobil)',
     price: 19000,
     priceFormatted: '19 000 Kč',
     priceNote: 'Platnost od 1. 4. 2026',
@@ -80,12 +80,14 @@ export const siteContent = {
         detail: 'diesel combi',
         highlights: ['kamera', 'parkovací senzory', 'asistent rozjezdu do kopce'],
         image: '/images/vycvikove-vozidlo.jpg',
+        objectPosition: 'center center',
       },
       {
         name: 'Suzuki Swift',
         detail: 'Natural 95',
         highlights: ['benzín', 'kompaktní', 'ideální pro město'],
         image: '/images/vycvikove-vozidlo-suzuki-swift.jpg',
+        objectPosition: 'center center',
       },
     ],
     description: 'Provádíme výuku a výcvik na skupinu B (osobní automobil). Výcvik probíhá ve vozidle Škoda Fabia (diesel) combi a dále v Suzuki Swift (natural 95). To znamená, že se vyzkoušíte oba druhy vozidel.',
@@ -95,8 +97,8 @@ export const siteContent = {
 
   instructor: {
     name: 'Barbora Šůlová',
-    title: 'Instruktorka & majitelka',
-    bio: 'Barbora vás provede celým kurzem od první teorie až po závěrečné zkoušky. Vytváří pohodovou atmosféru, kde se nebojíte chyb — vše klidně vysvětlí, opraví a vtipně okomentuje. Jak říkají žáci: „není to jen učitelka, je i taxikář a přítel."',
+    title: 'Instruktorka a majitelka',
+    bio: 'Barbora vás provede celým kurzem od první teorie až po závěrečné zkoušky. Vytváří pohodovou atmosféru, kde se nebojíte chyb. Vše klidně vysvětlí, opraví a vtipně okomentuje. Jak říkají žáci: „není to jen učitelka, je i taxikář a přítel."',
     photo: '/images/zakyne-s-instruktorkou.jpg',
     highlights: [
       'Pohodová atmosféra bez stresu',
@@ -110,8 +112,8 @@ export const siteContent = {
     intro: 'Žádost nutno vytisknout oboustranně na stránku A4.',
     steps: [
       { number: '01', title: 'Stáhněte formuláře', body: 'Vytiskněte žádost oboustranně na A4 a vyplňte. Přiložte lékařský posudek od praktického lékaře.' },
-      { number: '02', title: 'Kontaktujte Barboru', body: 'Zavolejte nebo napište — domluvíme termín první jízdy a předání podkladů.' },
-      { number: '03', title: 'Zahajte výcvik', body: 'Platba a splátkový plán se domluví individuálně. A je to — jedeme!' },
+      { number: '02', title: 'Kontaktujte Barboru', body: 'Zavolejte nebo napište. Domluvíme termín první jízdy a předání podkladů.' },
+      { number: '03', title: 'Zahajte výcvik', body: 'Platba a splátkový plán se domluví individuálně. A je to, jedeme!' },
     ],
     documents: [
       {
@@ -130,7 +132,7 @@ export const siteContent = {
   },
 
   testimonials: [
-    { author: 'Daniel Vokáč',       stars: 5, date: 'před 4 měsíci',   text: 'Stručně řečeno, během celého výcviku jsem nepocítil nervozitu, neuvěřitelně pohodlná atmosféra a přístup. Paní Šůlová je naprostý zlatíčko — není to jen učitelka, je i taxikář a přítel, zaveze vás kamkoliv v okolí a během jízdy vypráví vtipné historky. Jezdíte plně vybaveným autem s kamerou, senzory a asistentem rozjezdu.' },
+    { author: 'Daniel Vokáč',       stars: 5, date: 'před 4 měsíci',   text: 'Stručně řečeno, během celého výcviku jsem nepocítil nervozitu, neuvěřitelně pohodlná atmosféra a přístup. Paní Šůlová je naprostý zlatíčko, ale zároveň je velice poctivá a dbá na pravidla. Není to jen učitelka, je i taxikář a přítel, zaveze vás kamkoliv v okolí a během jízdy vypráví vtipné historky. Jezdíte plně vybaveným autem s kamerou, senzory a asistentem rozjezdu.' },
     { author: 'Natálie Roučková',   stars: 5, date: 'před 6 měsíci',   text: 'S autoškolou jsem byla maximálně spokojená. Lekce probíhaly v pohodové atmosféře, instruktorka měla skvělý přístup a vždycky měla pochopení i pro chyby. Skvělá příprava na zkoušky. Mohu jen doporučit všem, kdo hledají kvalitní a lidský přístup. Moc děkuji!!' },
     { author: 'Bárbra Sommerová',   stars: 5, date: 'před rokem',       text: 'Baruško, ještě jednou děkuji za tvůj přístup. Na zkoušky jsem byla připravena parádně, vyzkoušeli jsme si všechny záludnosti silnic, díky Tobě budu jezdit s jistotou.' },
     { author: 'Daniela Hánělová',   stars: 5, date: 'před 3 lety',      text: 'Paní Šůlová je úžasná. Když něco pokazíte, nebude na Vás křičet. V klidu Vám vysvětlí co máte udělat. Je s ní sranda, je velmi milá, můžete si s ní povídat o čemkoliv.' },

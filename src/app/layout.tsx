@@ -17,12 +17,12 @@ const body = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: 'Autoškola Barbora Šůlová — Rokycany',
+  title: 'Autoškola Barbora Šůlová | Rokycany',
   description: 'Kurz skupiny B (osobní automobil) v Rokycanech. Osobní přístup, dvě výcviková vozidla, výuka o víkendech. 19 000 Kč, možnost splátek.',
   keywords: 'autoškola, Rokycany, skupina B, řidičský průkaz, Barbora Šůlová, kurz řízení',
   openGraph: {
     title: 'Autoškola Barbora Šůlová',
-    description: 'Kurz skupiny B v Rokycanech — pohodová atmosféra, skvělá příprava na zkoušky.',
+    description: 'Kurz skupiny B v Rokycanech. Pohodová atmosféra, skvělá příprava na zkoušky.',
     type: 'website',
     locale: 'cs_CZ',
   },

@@ -26,7 +26,7 @@ export default function Course() {
             Ceník a vozidla
           </h2>
           <p className="text-slate-500 text-lg max-w-lg mx-auto">
-            Provádíme výuku a výcvik na skupinu B — osobní automobil.
+            Provádíme výuku a výcvik na skupinu B (osobní automobil).
           </p>
         </motion.div>
 
@@ -120,17 +120,16 @@ export default function Course() {
                 whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
                 className="group bg-white rounded-2xl border border-slate-100 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-100/40 overflow-hidden transition-shadow duration-300"
               >
-                <div className="relative h-52 sm:h-64 overflow-hidden">
+                <div className="relative bg-slate-50 flex items-center justify-center overflow-hidden" style={{ aspectRatio: '4/3' }}>
                   <Image
                     src={v.image}
                     alt={`Výcvikové vozidlo ${v.name} ${v.detail}`}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain p-6 group-hover:scale-[1.03] transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-white/95 text-slate-900 font-display font-bold text-sm px-3 py-1.5 rounded-lg">
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-white text-slate-900 font-display font-bold text-sm px-3 py-1.5 rounded-lg shadow-sm border border-slate-100">
                       {v.name} · {v.detail}
                     </span>
                   </div>

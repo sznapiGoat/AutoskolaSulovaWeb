@@ -43,7 +43,7 @@ export default function Navbar() {
       <div className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
-          <a href="#" className="flex flex-col leading-none group" aria-label="Autoškola Barbora Šůlová — zpět nahoru">
+          <a href="#" className="flex flex-col leading-none group" aria-label="Autoškola Barbora Šůlová, zpět nahoru">
             <span className={`font-display font-800 text-base md:text-lg transition-colors ${atTop ? 'text-white' : 'text-brand-900'}`}>
               Autoškola
             </span>

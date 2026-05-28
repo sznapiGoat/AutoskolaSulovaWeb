@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="font-display font-extrabold text-xl mb-1">{business.shortName}</div>
             <div className="text-amber-400 text-sm font-semibold mb-4">Barbora Šůlová</div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Kurz skupiny B — osobní automobil. Výuka i výcvik v Rokycanech, možnost plánování o víkendech.
+              Kurz skupiny B (osobní automobil). Výuka i výcvik v Rokycanech, možnost plánování o víkendech.
             </p>
             <a
               href={contact.facebook}

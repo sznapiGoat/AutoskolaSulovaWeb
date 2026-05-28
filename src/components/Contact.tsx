@@ -33,7 +33,7 @@ export default function Contact() {
             Rezervace a dotazy
           </h2>
           <p className="text-slate-500 text-lg max-w-md mx-auto">
-            Napište nebo zavolejte — rádi vám odpovíme a domluvíme termín.
+            Napište nebo zavolejte. Rádi vám odpovíme a domluvíme termín.
           </p>
         </motion.div>
 
@@ -158,7 +158,7 @@ export default function Contact() {
         >
           <div>
             <h3 className="text-xl md:text-2xl font-display font-bold mb-1">Připraveni začít?</h3>
-            <p className="text-white/70">Zavolejte nebo napište — bez závazků.</p>
+            <p className="text-white/70">Zavolejte nebo napište. Bez závazků.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a

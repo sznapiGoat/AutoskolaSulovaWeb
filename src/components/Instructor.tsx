@@ -92,9 +92,9 @@ export default function Instructor() {
             <div className="bg-brand-50 border-l-4 border-brand-500 rounded-r-2xl p-5">
               <Quote size={18} className="text-brand-300 mb-2" />
               <p className="text-slate-700 text-sm italic leading-relaxed">
-                &bdquo;Není to jen učitelka, je i taxikář a přítel &mdash; zaveze vás kamkoliv v okolí a během jízdy vypráví vtipné historky.&ldquo;
+                &bdquo;Není to jen učitelka, je i taxikář a přítel. Zaveze vás kamkoliv v okolí a během jízdy vypráví vtipné historky.&ldquo;
               </p>
-              <p className="text-slate-400 text-xs mt-2 font-semibold">&mdash; Daniel Vokáč, absolvent 2025</p>
+              <p className="text-slate-400 text-xs mt-2 font-semibold">Daniel Vokáč, absolvent 2025</p>
             </div>
 
             {/* CTA */}

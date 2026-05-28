@@ -72,7 +72,7 @@ export default function Hero() {
             className="flex items-center gap-2 mb-6"
           >
             <span className="bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
-              Rokycany — Skupina B
+              Rokycany · Skupina B
             </span>
             <span className="flex items-center gap-1 text-amber-300 text-sm font-semibold">
               <Star size={13} fill="currentColor" />
