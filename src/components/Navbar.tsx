@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValueEvent, useScroll, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
+import Image from 'next/image';
 import { siteContent } from '@/lib/content';
 
 export default function Navbar() {
@@ -43,13 +44,23 @@ export default function Navbar() {
       <div className="container-wide">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
-          <a href="#" className="flex flex-col leading-none group" aria-label="Autoškola Barbora Šůlová, zpět nahoru">
-            <span className={`font-display font-800 text-base md:text-lg transition-colors ${atTop ? 'text-white' : 'text-brand-900'}`}>
-              Autoškola
-            </span>
-            <span className={`font-display font-700 text-sm md:text-base transition-colors ${atTop ? 'text-amber-400' : 'text-brand-700'}`}>
-              Barbora Šůlová
-            </span>
+          <a
+            href="#"
+            aria-label="Autoškola Barbora Šůlová, zpět nahoru"
+            className="flex items-center shrink-0"
+          >
+            <Image
+              src="/images/logo1.png"
+              alt="Autoškola Šůlová logo"
+              width={120}
+              height={120}
+              className={`object-contain transition-all duration-300 rounded-xl ${
+                atTop
+                  ? 'h-14 w-14 bg-white/20 backdrop-blur-sm p-1'
+                  : 'h-12 w-12'
+              }`}
+              priority
+            />
           </a>
 
           {/* Desktop nav */}
