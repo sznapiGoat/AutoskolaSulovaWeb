@@ -35,7 +35,7 @@ export const siteContent = {
     subheadline: 'Osobní přístup, dvě cvičná vozidla a výuka v pohodové atmosféře. Přímo v Rokycanech.',
     ctaPrimary: { label: 'Chci se přihlásit', href: '#prihlaska' },
     ctaSecondary: { label: 'Zobrazit ceník', href: '#kurz' },
-    bgImage: '/images/zakyne-s-instruktorkou.jpg',
+    bgImage: '/images/foto-2.jpg',
     stats: [
       { value: '44+', label: 'absolventů' },
       { value: '4,4★', label: 'na Google (42 recenzí)' },

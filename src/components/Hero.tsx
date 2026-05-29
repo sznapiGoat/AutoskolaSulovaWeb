@@ -49,16 +49,15 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={hero.bgImage}
-          alt="Instruktorka Barbora Šůlová se žákyní u výcvikového vozidla"
+          alt="Pohled na hory při západu slunce"
           fill
           priority
           quality={90}
-          className="object-cover object-center scale-105"
-          style={{ objectPosition: 'center 30%' }}
+          className="object-cover object-center"
         />
-        {/* Gradient overlay — light on right, darker on left for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-900/85 via-brand-900/65 to-brand-900/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-900/60 via-transparent to-transparent" />
+        {/* Lighter overlay — photo is naturally dark */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-900/75 via-brand-900/50 to-brand-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-900/50 via-transparent to-transparent" />
       </div>
 
       {/* Content */}

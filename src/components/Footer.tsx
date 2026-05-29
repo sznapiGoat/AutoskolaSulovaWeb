@@ -1,5 +1,4 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
-import Image from 'next/image';
 
 function FacebookIcon({ size = 16 }: { size?: number }) {
   return (
@@ -20,15 +19,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <div className="mb-4">
-              <Image
-                src="/images/logo1.png"
-                alt="Autoškola Šůlová logo"
-                width={80}
-                height={80}
-                className="rounded-xl bg-white/10 p-1.5"
-              />
-            </div>
+            <div className="font-display font-extrabold text-xl mb-1">{business.shortName}</div>
+            <div className="text-amber-400 text-sm font-semibold mb-4">Barbora Šůlová</div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Kurz skupiny B (osobní automobil). Výuka i výcvik v Rokycanech, možnost plánování o víkendech.
             </p>

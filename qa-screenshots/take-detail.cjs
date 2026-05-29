@@ -7,22 +7,36 @@ const puppeteer = require('C:/Users/sznap/autoskola-sulova/scraper/node_modules/
   await page.goto('http://localhost:3000', { waitUntil: 'networkidle2', timeout: 20000 });
   await new Promise(r => setTimeout(r, 2000));
 
-  // Navbar on hero (dark)
-  await page.screenshot({ path: 'C:/Users/sznap/autoskola-sulova-web/qa-screenshots/detail-navbar-hero.png',
-    clip: { x: 0, y: 0, width: 600, height: 72 } });
+  // Full scroll pass to trigger all whileInView
+  const totalH = await page.evaluate(() => document.documentElement.scrollHeight);
+  for (let pos = 0; pos < totalH; pos += 300) {
+    await page.evaluate((y) => window.scrollTo(0, y), pos);
+    await new Promise(r => setTimeout(r, 80));
+  }
+  await new Promise(r => setTimeout(r, 800));
 
-  // Scroll just past hero into white section (navbar turns white)
-  await page.evaluate(() => window.scrollTo(0, 80));
-  await new Promise(r => setTimeout(r, 600));
-  await page.screenshot({ path: 'C:/Users/sznap/autoskola-sulova-web/qa-screenshots/detail-navbar-white.png',
-    clip: { x: 0, y: 0, width: 600, height: 72 } });
-
-  // Footer top
-  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight - 600));
+  // Scroll to Course section center
+  const courseY = await page.evaluate(() => {
+    const el = document.getElementById('kurz');
+    return el ? el.getBoundingClientRect().top + window.scrollY : 0;
+  });
+  await page.evaluate((y) => window.scrollTo(0, y - 80), courseY);
   await new Promise(r => setTimeout(r, 500));
-  await page.screenshot({ path: 'C:/Users/sznap/autoskola-sulova-web/qa-screenshots/detail-footer.png',
-    clip: { x: 0, y: 0, width: 600, height: 220 } });
+  await page.screenshot({ path: 'C:/Users/sznap/autoskola-sulova-web/qa-screenshots/detail-course.png', fullPage: false });
+  console.log('Course screenshot done');
+
+  // Navbar (scroll back to near top so it shows white)
+  await page.evaluate(() => window.scrollTo(0, 100));
+  await new Promise(r => setTimeout(r, 400));
+  await page.screenshot({ path: 'C:/Users/sznap/autoskola-sulova-web/qa-screenshots/detail-navbar-white.png',
+    clip: { x: 0, y: 0, width: 1000, height: 72 } });
+
+  // Navbar on dark hero
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await new Promise(r => setTimeout(r, 400));
+  await page.screenshot({ path: 'C:/Users/sznap/autoskola-sulova-web/qa-screenshots/detail-navbar-dark.png',
+    clip: { x: 0, y: 0, width: 1000, height: 72 } });
 
   await browser.close();
-  console.log('done');
+  console.log('All done');
 })();

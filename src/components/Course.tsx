@@ -110,44 +110,50 @@ export default function Course() {
               {course.description}
             </p>
 
-            {course.vehicles.map((v, i) => (
-              <motion.div
-                key={v.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
-                whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
-                className="group bg-white rounded-2xl border border-slate-100 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-100/40 overflow-hidden transition-shadow duration-300"
-              >
-                <div className="relative bg-slate-50 flex items-center justify-center overflow-hidden" style={{ aspectRatio: '4/3' }}>
-                  <Image
-                    src={v.image}
-                    alt={`Výcvikové vozidlo ${v.name} ${v.detail}`}
-                    fill
-                    className="object-contain p-6 group-hover:scale-[1.03] transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-white text-slate-900 font-display font-bold text-sm px-3 py-1.5 rounded-lg shadow-sm border border-slate-100">
-                      {v.name} · {v.detail}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <div className="flex flex-wrap gap-2">
-                    {v.highlights.map((h) => (
-                      <span
-                        key={h}
-                        className="bg-brand-50 text-brand-700 text-xs font-semibold px-2.5 py-1 rounded-lg border border-brand-100"
-                      >
-                        {h}
+            {/* Side-by-side portrait cards — matches the natural 3:4 photo ratio */}
+            <div className="grid grid-cols-2 gap-4">
+              {course.vehicles.map((v, i) => (
+                <motion.div
+                  key={v.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.12, ease: 'easeOut' }}
+                  whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+                  className="group bg-white rounded-2xl border border-slate-100 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-100/40 overflow-hidden transition-shadow duration-300"
+                >
+                  {/* Portrait container matches the ~3:4 photo aspect ratio */}
+                  <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
+                    <Image
+                      src={v.image}
+                      alt={`Výcvikové vozidlo ${v.name} ${v.detail}`}
+                      fill
+                      className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
+                      sizes="(max-width: 768px) 50vw, 30vw"
+                    />
+                    {/* Bottom label */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/70 to-transparent pt-8 pb-3 px-3">
+                      <span className="text-white font-display font-bold text-sm">
+                        {v.name}
                       </span>
-                    ))}
+                      <span className="text-white/70 text-xs ml-1.5">{v.detail}</span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="p-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {v.highlights.map((h) => (
+                        <span
+                          key={h}
+                          className="bg-brand-50 text-brand-700 text-xs font-semibold px-2 py-1 rounded-lg border border-brand-100"
+                        >
+                          {h}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
 
             <div className="bg-white rounded-2xl border border-slate-100 p-5 text-sm text-slate-500">
               <strong className="text-slate-700">Učebna:</strong> {course.classroom}
